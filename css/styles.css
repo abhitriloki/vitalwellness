@@ -887,57 +887,68 @@ a:hover {
     --spacing-xxl: 3rem;
     --spacing-xl: 2rem;
   }
-  
+
   .mobile-menu-toggle {
     display: block;
   }
-  
+
   .nav-menu {
     display: none;
   }
-  
+
   .hero {
     min-height: 80vh;
     text-align: center;
   }
-  
+
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-buttons {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .appointment-card {
     margin-left: 0;
     margin-top: var(--spacing-xl);
   }
-  
+
   .hero-content {
     padding-top: 100px;
   }
-  
-  .col-sm-12 {
+
+  .col-sm-12,
+  .col-3,
+  .col-4,
+  .col-6,
+  .col-8 {
     flex: 0 0 100%;
     max-width: 100%;
+    margin-bottom: var(--spacing-md);
   }
-  
+
   .services-grid,
   .features-grid,
   .team-grid,
   .blog-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .calculators-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  /* Better email and text wrapping on mobile */
+  p, a, span {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -983,3 +994,46 @@ a:hover {
 
 .w-100 { width: 100%; }
 .h-100 { height: 100%; }
+/* Additional responsive improvements */
+@media (max-width: 480px) {
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .form-control {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+/* Better email display */
+.email-text, p[style*="Email"], a[href^="mailto"] {
+  word-break: break-all;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Ensure contact cards are responsive */
+@media (max-width: 992px) {
+  .col-3 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+@media (max-width: 576px) {
+  .col-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
