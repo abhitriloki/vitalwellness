@@ -324,15 +324,19 @@ a:hover {
 /* Hero Section */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), rgba(39, 174, 96, 0.1)), url('../images/hero-wellness.jpg') center/cover;
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.85), rgba(39, 174, 96, 0.85)), url('../images/hero-wellness.jpg') center/cover;
   display: flex;
   align-items: center;
   position: relative;
-  color: var(--text-dark);
+  color: var(--white);
 }
 
 .hero-content {
   padding-top: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
 }
 
 .hero-title {
@@ -341,6 +345,7 @@ a:hover {
   margin-bottom: var(--spacing-md);
   color: var(--text-dark);
   line-height: 1.1;
+  text-shadow: none;
 }
 
 .hero-subtitle {
@@ -348,6 +353,27 @@ a:hover {
   margin-bottom: var(--spacing-xl);
   color: var(--text-light);
   max-width: 600px;
+  text-shadow: none;
+}
+
+/* Hero section with dark overlay for better text readability */
+.hero.dark-overlay {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('../images/hero-wellness.jpg') center/cover;
+}
+
+.hero.dark-overlay .hero-content {
+  background: transparent;
+  box-shadow: none;
+}
+
+.hero.dark-overlay .hero-title {
+  color: var(--white);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero.dark-overlay .hero-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero-buttons {
@@ -1035,5 +1061,39 @@ a:hover {
   .col-3 {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+}
+
+/* Hero section responsive improvements */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: var(--spacing-lg) !important;
+    margin: var(--spacing-md);
+  }
+
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 70vh !important;
+  }
+
+  .hero-content {
+    padding: var(--spacing-md) !important;
+  }
+
+  .hero-title {
+    font-size: 1.75rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem !important;
   }
 }
