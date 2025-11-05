@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VitalCare Wellness - Your premier destination for complete healthcare and wellness solutions. Expert physiotherapy, nutrition counseling, mental wellness, and more.">
+    <meta name="keywords" content="wellness clinic, physiotherapy, nutrition counseling, mental health, yoga, ayurveda, weight management, healthcare">
+    <meta name="author" content="VitalCare Wellness">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="VitalCare Wellness - Complete Healthcare Solutions">
+    <meta property="og:description" content="Transform your health with our comprehensive wellness services. Expert care, modern facilities, personalized treatment.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vitalcarewellness.com">
+    <meta property="og:image" content="./images/hero-wellness.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+    
+    <title>VitalCare Wellness - Your Journey to Complete Wellness Starts Here</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./images/hero-wellness.jpg" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <div class="logo">
+                VitalCare Wellness
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#services" class="nav-link">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services/physiotherapy.html" class="dropdown-item">Physiotherapy</a></li>
+                        <li><a href="services/nutrition.html" class="dropdown-item">Nutrition Counseling</a></li>
+                        <li><a href="services/mental-wellness.html" class="dropdown-item">Mental Wellness</a></li>
+                        <li><a href="services/yoga-fitness.html" class="dropdown-item">Yoga & Fitness</a></li>
+                        <li><a href="services/ayurveda.html" class="dropdown-item">Ayurvedic Treatment</a></li>
+                        <li><a href="services/weight-management.html" class="dropdown-item">Weight Management</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="career.html" class="nav-link">Careers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#appointment" class="btn btn-primary">Book Appointment</a>
+                </li>
+            </ul>
+            
+            <button class="mobile-menu-toggle">☰</button>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-menu">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="services/physiotherapy.html" class="mobile-nav-link">Physiotherapy</a></li>
+                <li><a href="services/nutrition.html" class="mobile-nav-link">Nutrition Counseling</a></li>
+                <li><a href="services/mental-wellness.html" class="mobile-nav-link">Mental Wellness</a></li>
+                <li><a href="services/yoga-fitness.html" class="mobile-nav-link">Yoga & Fitness</a></li>
+                <li><a href="services/ayurveda.html" class="mobile-nav-link">Ayurvedic Treatment</a></li>
+                <li><a href="services/weight-management.html" class="mobile-nav-link">Weight Management</a></li>
+                <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+                <li><a href="career.html" class="mobile-nav-link">Careers</a></li>
+                <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                <li><a href="#appointment" class="btn btn-primary">Book Appointment</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Your Journey to Complete Wellness Starts Here</h1>
+                <p class="hero-subtitle">Experience transformative healthcare with our comprehensive wellness solutions. From physiotherapy to mental wellness, we're here to guide you towards a healthier, happier life.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#appointment" class="btn btn-primary">Get Started Today</a>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Appointment Card -->
+        <div class="container">
+            <div class="appointment-card">
+                <h3>Book Your Appointment</h3>
+                <form id="appointmentForm">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" name="name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" name="phone" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="form-label">Preferred Date *</label>
+                                <input type="date" name="date" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="form-label">Preferred Time</label>
+                                <input type="time" name="time" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label class="form-label">Service Needed *</label>
+                                <select name="service" class="form-control form-select" required>
+                                    <option value="">Select a service</option>
+                                    <option value="Physiotherapy">Physiotherapy</option>
+                                    <option value="Nutrition Counseling">Nutrition Counseling</option>
+                                    <option value="Mental Wellness">Mental Wellness</option>
+                                    <option value="Yoga & Fitness">Yoga & Fitness</option>
+                                    <option value="Ayurvedic Treatment">Ayurvedic Treatment</option>
+                                    <option value="Weight Management">Weight Management</option>
+                                    <option value="General Consultation">General Consultation</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100">Request Appointment</button>
+                </form>
+                <div id="formMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Wellness Services</h2>
+                <p class="section-subtitle">Comprehensive healthcare solutions designed to restore, maintain, and enhance your overall well-being.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="./images/service-physiotherapy.jpg" alt="Physiotherapy Treatment" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">🏃‍♂️</div>
+                        <h3 class="service-title">Physiotherapy</h3>
+                        <p class="service-description">Advanced therapeutic techniques to restore movement, reduce pain, and improve physical function through personalized treatment plans.</p>
+                        <a href="services/physiotherapy.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="./images/service-nutrition.jpg" alt="Nutrition Counseling" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">🥗</div>
+                        <h3 class="service-title">Nutrition Counseling</h3>
+                        <p class="service-description">Personalized nutrition plans and expert guidance to help you achieve optimal health through proper dietary choices and lifestyle modifications.</p>
+                        <a href="services/nutrition.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="./images/service-mental-wellness.jpg" alt="Mental Wellness Therapy" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">🧠</div>
+                        <h3 class="service-title">Mental Wellness</h3>
+                        <p class="service-description">Professional counseling and therapeutic interventions to support your mental health and emotional well-being through evidence-based practices.</p>
+                        <a href="services/mental-wellness.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="./images/service-yoga-fitness.jpg" alt="Yoga and Fitness Classes" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">🧘‍♀️</div>
+                        <h3 class="service-title">Yoga & Fitness</h3>
+                        <p class="service-description">Holistic fitness programs combining yoga, strength training, and cardio to enhance physical strength, flexibility, and mental clarity.</p>
+                        <a href="services/yoga-fitness.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="./images/service-ayurveda.jpg" alt="Ayurvedic Treatment" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">🌿</div>
+                        <h3 class="service-title">Ayurvedic Treatment</h3>
+                        <p class="service-description">Ancient wisdom meets modern wellness through personalized Ayurvedic treatments, herbal therapies, and lifestyle recommendations.</p>
+                        <a href="services/ayurveda.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="./images/service-weight-management.jpg" alt="Weight Management Program" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">⚖️</div>
+                        <h3 class="service-title">Weight Management</h3>
+                        <p class="service-description">Sustainable weight loss and management programs combining nutrition, exercise, and behavioral counseling for lasting results.</p>
+                        <a href="services/weight-management.html" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="features" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose VitalCare Wellness?</h2>
+                <p class="section-subtitle">We're committed to providing exceptional healthcare experiences that deliver measurable results.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍⚕️</div>
+                    <h3>Expert Team</h3>
+                    <p>Our certified healthcare professionals bring years of experience and specialized training to provide you with the highest quality care.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏥</div>
+                    <h3>Modern Facilities</h3>
+                    <p>State-of-the-art equipment and comfortable environments designed to enhance your healing and wellness journey.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Personalized Care</h3>
+                    <p>Every treatment plan is tailored to your unique needs, goals, and lifestyle for optimal outcomes and satisfaction.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Proven Results</h3>
+                    <p>Our evidence-based approaches and continuous monitoring ensure you achieve and maintain your wellness objectives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Healthcare Experts</h2>
+                <p class="section-subtitle">Our diverse team of specialists is dedicated to your health and wellness journey.</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="./images/doctor-male.jpg" alt="Dr. Michael Chen" class="team-image">
+                    <div class="team-content">
+                        <h3 class="team-name">Dr. Michael Chen</h3>
+                        <p class="team-specialization">Chief Physiotherapist & Wellness Director</p>
+                        <p class="team-bio">Dr. Chen brings 15+ years of experience in sports medicine and rehabilitation. He's passionate about helping patients recover and achieve their peak physical performance through innovative therapeutic techniques.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <img src="./images/doctor-female.jpg" alt="Dr. Sarah Johnson" class="team-image">
+                    <div class="team-content">
+                        <h3 class="team-name">Dr. Sarah Johnson</h3>
+                        <p class="team-specialization">Nutrition Specialist & Health Coach</p>
+                        <p class="team-bio">Dr. Johnson is a certified nutritionist with expertise in weight management and functional nutrition. She specializes in creating sustainable dietary changes that transform lives and improve long-term health outcomes.</p>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <img src="./images/team-member.jpg" alt="Dr. Emily Rodriguez" class="team-image">
+                    <div class="team-content">
+                        <h3 class="team-name">Dr. Emily Rodriguez</h3>
+                        <p class="team-specialization">Mental Wellness Counselor</p>
+                        <p class="team-bio">Dr. Rodriguez combines traditional and modern therapeutic approaches to support mental health. Her expertise in stress management and emotional resilience helps patients navigate life's challenges with confidence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Patients Say</h2>
+                <p class="section-subtitle">Real stories from real people who've transformed their lives with VitalCare Wellness.</p>
+            </div>
+            
+            <div class="testimonial-carousel">
+                <div class="testimonial-track">
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="testimonial-text">"The team at VitalCare Wellness completely changed my life. After years of chronic back pain, I finally found relief through their personalized physiotherapy program. The care and attention I received was exceptional."</p>
+                            <div class="testimonial-author">
+                                <img src="./images/doctor-male.jpg" alt="John Smith" class="author-image">
+                                <div class="author-info">
+                                    <h4>John Smith</h4>
+                                    <p>Patient since 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="testimonial-text">"Dr. Johnson's nutrition counseling helped me lose 30 pounds and keep it off for over a year. The meal plans were practical and delicious, making healthy eating sustainable and enjoyable."</p>
+                            <div class="testimonial-author">
+                                <img src="./images/doctor-female.jpg" alt="Maria Garcia" class="author-image">
+                                <div class="author-info">
+                                    <h4>Maria Garcia</h4>
+                                    <p>Weight Management Client</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                            <p class="testimonial-text">"The mental wellness program helped me manage my anxiety and stress better than any treatment I'd tried before. Dr. Rodriguez's approach was compassionate and effective."</p>
+                            <div class="testimonial-author">
+                                <img src="./images/team-member.jpg" alt="David Park" class="author-image">
+                                <div class="author-info">
+                                    <h4>David Park</h4>
+                                    <p>Mental Wellness Patient</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Calculators Section -->
+    <section id="calculators" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Health Assessment Tools</h2>
+                <p class="section-subtitle">Quick health assessments to help you understand your wellness metrics and set informed goals.</p>
+            </div>
+            
+            <div class="calculators-grid">
+                <!-- BMI Calculator -->
+                <div class="calculator-card">
+                    <h3>BMI Calculator</h3>
+                    <p style="color: #6c757d; margin-bottom: 1.5rem;">Calculate your Body Mass Index to understand your weight category and health risks.</p>
+                    
+                    <form id="bmiForm">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">Height (cm)</label>
+                                    <input type="number" id="bmiHeight" class="form-control" placeholder="170" min="50" max="300" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">Weight (kg)</label>
+                                    <input type="number" id="bmiWeight" class="form-control" placeholder="70" min="20" max="500" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100">Calculate BMI</button>
+                        
+                        <div class="calculator-result">
+                            <h4>Live BMI: <span id="bmiValue" style="color: #2ecc71;">--</span></h4>
+                        </div>
+                    </form>
+                    
+                    <div id="bmiResult" class="mt-3"></div>
+                </div>
+                
+                <!-- Calorie Calculator -->
+                <div class="calculator-card">
+                    <h3>Daily Calorie Calculator</h3>
+                    <p style="color: #6c757d; margin-bottom: 1.5rem;">Estimate your daily calorie needs based on your age, weight, height, and activity level.</p>
+                    
+                    <form id="calorieForm">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">Age</label>
+                                    <input type="number" id="calorieAge" class="form-control" placeholder="30" min="10" max="120" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">Gender</label>
+                                    <select id="calorieGender" class="form-control form-select" required>
+                                        <option value="">Select</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">Height (cm)</label>
+                                    <input type="number" id="calorieHeight" class="form-control" placeholder="170" min="100" max="250" required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label class="form-label">Weight (kg)</label>
+                                    <input type="number" id="calorieWeight" class="form-control" placeholder="70" min="30" max="200" required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Activity Level</label>
+                            <select id="calorieActivity" class="form-control form-select" required>
+                                <option value="">Select activity level</option>
+                                <option value="sedentary">Sedentary (little/no exercise)</option>
+                                <option value="light">Light (light exercise 1-3 days/week)</option>
+                                <option value="moderate">Moderate (moderate exercise 3-5 days/week)</option>
+                                <option value="active">Active (hard exercise 6-7 days/week)</option>
+                                <option value="very_active">Very Active (very hard exercise, physical job)</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary w-100">Calculate Calories</button>
+                    </form>
+                    
+                    <div id="calorieResult" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Health & Wellness Articles</h2>
+                <p class="section-subtitle">Stay informed with our latest insights on health, wellness, and lifestyle optimization.</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="./images/blog-wellness.jpg" alt="Mindful Wellness Practices" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">Published on November 1, 2025 • Wellness Tips</div>
+                        <h3 class="blog-title">10 Mindful Practices for Daily Wellness</h3>
+                        <p class="blog-excerpt">Discover simple yet powerful mindfulness techniques that can transform your daily routine and boost your overall well-being.</p>
+                        <a href="blog.html" class="btn btn-outline">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="./images/blog-nutrition.png" alt="Nutrition for Optimal Health" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">Published on October 28, 2025 • Nutrition</div>
+                        <h3 class="blog-title">The Science of Nutrition: Eating for Energy</h3>
+                        <p class="blog-excerpt">Learn how proper nutrition fuels your body and mind, with expert tips on creating balanced meals that sustain energy throughout the day.</p>
+                        <a href="blog.html" class="btn btn-outline">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="./images/blog-fitness.jpg" alt="Fitness and Exercise Tips" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">Published on October 25, 2025 • Fitness</div>
+                        <h3 class="blog-title">Home Workouts That Actually Work</h3>
+                        <p class="blog-excerpt">Effective exercise routines you can do at home, designed to build strength, improve flexibility, and boost your cardiovascular health.</p>
+                        <a href="blog.html" class="btn btn-outline">Read More</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="blog.html" class="btn btn-outline">View All Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Section (Duplicate for mobile users) -->
+    <section id="appointment" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ready to Start Your Wellness Journey?</h2>
+                <p class="section-subtitle">Take the first step towards better health. Book your appointment today and let our experts guide you on your path to wellness.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-8">
+                    <div class="appointment-card">
+                        <h3>Request Your Appointment</h3>
+                        <form id="appointmentForm2">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Full Name *</label>
+                                        <input type="text" name="name" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number *</label>
+                                        <input type="tel" name="phone" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Email Address *</label>
+                                        <input type="email" name="email" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Preferred Date *</label>
+                                        <input type="date" name="date" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Preferred Time</label>
+                                        <input type="time" name="time" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Service Needed *</label>
+                                        <select name="service" class="form-control form-select" required>
+                                            <option value="">Select a service</option>
+                                            <option value="Physiotherapy">Physiotherapy</option>
+                                            <option value="Nutrition Counseling">Nutrition Counseling</option>
+                                            <option value="Mental Wellness">Mental Wellness</option>
+                                            <option value="Yoga & Fitness">Yoga & Fitness</option>
+                                            <option value="Ayurvedic Treatment">Ayurvedic Treatment</option>
+                                            <option value="Weight Management">Weight Management</option>
+                                            <option value="General Consultation">General Consultation</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-100">Request Appointment</button>
+                        </form>
+                        <div id="formMessage2"></div>
+                    </div>
+                </div>
+                
+                <div class="col-4">
+                    <div style="background: var(--white); padding: 2rem; border-radius: var(--border-radius-lg); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); border: 1px solid var(--border-light);">
+                        <h4 style="color: var(--primary-green); margin-bottom: 1rem;">Contact Information</h4>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <strong>📍 Address:</strong><br>
+                            123 Wellness Street<br>
+                            Health City, HC 12345
+                        </div>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <strong>📞 Phone:</strong><br>
+                            (555) 123-4567
+                        </div>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <strong>✉️ Email:</strong><br>
+                            info@vitalcarewellness.com
+                        </div>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <strong>🕒 Hours:</strong><br>
+                            Monday - Friday: 8:00 AM - 8:00 PM<br>
+                            Saturday: 9:00 AM - 6:00 PM<br>
+                            Sunday: 10:00 AM - 4:00 PM
+                        </div>
+                        
+                        <div>
+                            <strong>🚗 Parking:</strong><br>
+                            Free parking available
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VitalCare Wellness</h3>
+                    <p>Your trusted partner in comprehensive healthcare and wellness solutions. We're committed to helping you achieve optimal health and well-being through personalized, evidence-based care.</p>
+                    <div style="margin-top: 1rem;">
+                        <a href="#" style="margin-right: 1rem; color: #25d366; font-size: 1.5rem;">📱</a>
+                        <a href="#" style="margin-right: 1rem; color: #1877f2; font-size: 1.5rem;">📘</a>
+                        <a href="#" style="margin-right: 1rem; color: #e4405f; font-size: 1.5rem;">📷</a>
+                        <a href="#" style="color: #1da1f2; font-size: 1.5rem;">🐦</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="career.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services/physiotherapy.html">Physiotherapy</a></li>
+                        <li><a href="services/nutrition.html">Nutrition Counseling</a></li>
+                        <li><a href="services/mental-wellness.html">Mental Wellness</a></li>
+                        <li><a href="services/yoga-fitness.html">Yoga & Fitness</a></li>
+                        <li><a href="services/ayurveda.html">Ayurvedic Treatment</a></li>
+                        <li><a href="services/weight-management.html">Weight Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 123 Wellness Street<br>Health City, HC 12345</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ info@vitalcarewellness.com</p>
+                    <p>🕒 Mon-Fri: 8AM-8PM<br>Sat: 9AM-6PM<br>Sun: 10AM-4PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 VitalCare Wellness. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | Made with ❤️ in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="#" class="whatsapp-btn" title="Chat with us on WhatsApp">💬</a>
+
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read the latest health and wellness articles from VitalCare Wellness experts. Tips, advice, and insights for optimal health.">
+    <meta name="keywords" content="health blog, wellness articles, nutrition tips, fitness advice, mental health, wellness tips">
+    <title>Health & Wellness Blog - VitalCare Wellness</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏥</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">VitalCare Wellness</a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#services" class="nav-link">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="services/physiotherapy.html" class="dropdown-item">Physiotherapy</a></li>
+                        <li><a href="services/nutrition.html" class="dropdown-item">Nutrition Counseling</a></li>
+                        <li><a href="services/mental-wellness.html" class="dropdown-item">Mental Wellness</a></li>
+                        <li><a href="services/yoga-fitness.html" class="dropdown-item">Yoga & Fitness</a></li>
+                        <li><a href="services/ayurveda.html" class="dropdown-item">Ayurvedic Treatment</a></li>
+                        <li><a href="services/weight-management.html" class="dropdown-item">Weight Management</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="career.html" class="nav-link">Careers</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#appointment" class="btn btn-primary">Book Appointment</a>
+                </li>
+            </ul>
+            
+            <button class="mobile-menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), rgba(39, 174, 96, 0.1)), url('./images/blog-wellness.jpg') center/cover; min-height: 50vh;">
+        <div class="container">
+            <div class="hero-content" style="padding-top: 100px; text-align: center;">
+                <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 1rem;">Health & Wellness Blog</h1>
+                <p class="hero-subtitle" style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem;">Expert insights, practical tips, and the latest research to help you live your healthiest, happiest life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h3 style="margin-bottom: 1.5rem;">Browse by Category</h3>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <button class="btn btn-outline" style="margin-bottom: 0.5rem;">All Posts</button>
+                    <button class="btn btn-outline" style="margin-bottom: 0.5rem;">Nutrition</button>
+                    <button class="btn btn-outline" style="margin-bottom: 0.5rem;">Fitness</button>
+                    <button class="btn btn-outline" style="margin-bottom: 0.5rem;">Mental Health</button>
+                    <button class="btn btn-outline" style="margin-bottom: 0.5rem;">Wellness Tips</button>
+                    <button class="btn btn-outline" style="margin-bottom: 0.5rem;">Research</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Article</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <img src="./images/blog-wellness.jpg" alt="Featured Article" style="width: 100%; border-radius: var(--border-radius-lg); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+                </div>
+                <div class="col-6">
+                    <div style="background: var(--white); padding: 3rem; border-radius: var(--border-radius-lg); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); height: 100%; display: flex; flex-direction: column; justify-content: center;">
+                        <div style="color: var(--primary-green); font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem;">FEATURED • WELLNESS TIPS</div>
+                        <h3 style="font-size: 2rem; margin-bottom: 1rem;">10 Science-Backed Habits for Optimal Health</h3>
+                        <p style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.7;">Discover the evidence-based daily practices that our wellness experts recommend for improving physical health, mental clarity, and overall life satisfaction. These habits are simple to implement but powerful in their impact.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <div>
+                                <strong style="color: var(--text-dark);">Dr. Sarah Johnson</strong>
+                                <p style="color: var(--text-light); font-size: 0.9rem; margin: 0;">November 1, 2025 • 8 min read</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">Read Full Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Articles</h2>
+                <p class="section-subtitle">Fresh insights and practical advice from our wellness experts.</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="./images/blog-nutrition.png" alt="Nutrition Article" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">Published on October 28, 2025 • Nutrition</div>
+                        <h3 class="blog-title">The Ultimate Guide to Meal Prep for Busy Professionals</h3>
+                        <p class="blog-excerpt">Learn time-saving meal prep strategies that support your health goals while fitting into your hectic schedule. Includes 5 easy recipes and storage tips.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a href="#" class="btn btn-outline">Read More</a>
+                            <span style="color: var(--text-light); font-size: 0.9rem;">5 min read</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="./images/blog-fitness.jpg" alt="Fitness Article" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">Published on October 25, 2025 • Fitness</div>
+                        <h3 class="blog-title">Home Workouts: Maximum Results, Minimum Time</h3>
+                        <p class="blog-excerpt">Discover efficient workout routines that deliver amazing results without a gym. Perfect for beginners and experienced fitness enthusiasts alike.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a href="#" class="btn btn-outline">Read More</a>
+                            <span style="color: var(--text-light); font-size: 0.9rem;">7 min read</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="./images/blog-wellness.jpg" alt="Mental Health Article" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">Published on October 22, 2025 • Mental Health</div>
+                        <h3 class="blog-title">Managing Stress in Uncertain Times</h3>
+                        <p class="blog-excerpt">Practical strategies for maintaining mental wellness during challenging periods. Learn evidence-based techniques for stress reduction and emotional resilience.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a href="#" class="btn btn-outline">Read More</a>
+                            <span style="color: var(--text-light); font-size: 0.9rem;">6 min read</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="./images/blog-nutrition.png" alt="Sleep Article" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">Published on October 20, 2025 • Wellness Tips</div>
+                        <h3 class="blog-title">The Sleep-Health Connection: Why Rest Matters</h3>
+                        <p class="blog-excerpt">Explore the critical link between quality sleep and overall health. Learn how to optimize your sleep environment and routines for better recovery.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a href="#" class="btn btn-outline">Read More</a>
+                            <span style="color: var(--text-light); font-size: 0.9rem;">9 min read</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="./images/blog-fitness.jpg" alt="Hydration Article" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">Published on October 18, 2025 • Nutrition</div>
+                        <h3 class="blog-title">Hydration Myths Debunked: What You Need to Know</h3>
+                        <p class="blog-excerpt">Separate fact from fiction about hydration. Our experts explain how much water you really need and the best ways to stay properly hydrated.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a href="#" class="btn btn-outline">Read More</a>
+                            <span style="color: var(--text-light); font-size: 0.9rem;">4 min read</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <img src="./images/blog-wellness.jpg" alt="Mindfulness Article" class="blog-image">
+                    <div class="blog-content">
+                        <div class="blog-meta">Published on October 15, 2025 • Mental Health</div>
+                        <h3 class="blog-title">Mindfulness for Beginners: A Step-by-Step Guide</h3>
+                        <p class="blog-excerpt">Start your mindfulness journey with this beginner-friendly guide. Learn simple techniques you can practice anywhere to reduce stress and increase focus.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <a href="#" class="btn btn-outline">Read More</a>
+                            <span style="color: var(--text-light); font-size: 0.9rem;">8 min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="section bg-light">
+        <div class="container">
+            <div style="background: linear-gradient(135deg, var(--primary-green), var(--secondary-green)); color: white; padding: 3rem; border-radius: var(--border-radius-lg); text-align: center;">
+                <h2 style="color: white; margin-bottom: 1rem;">Stay Updated with Our Newsletter</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; opacity: 0.9;">Get the latest health tips, wellness insights, and exclusive content delivered to your inbox weekly.</p>
+                
+                <form style="max-width: 500px; margin: 0 auto;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                        <input type="email" placeholder="Enter your email address" style="flex: 1; min-width: 250px; padding: 12px 16px; border: none; border-radius: var(--border-radius); font-size: 1rem;">
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </div>
+                </form>
+                
+                <p style="font-size: 0.9rem; margin-top: 1rem; opacity: 0.8;">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Topics -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular Topics</h2>
+                <p class="section-subtitle">Explore our most-read articles on trending wellness topics.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-4">
+                    <div style="background: var(--white); padding: 2rem; border-radius: var(--border-radius-lg); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--primary-green); margin-bottom: 1rem;">🥗</div>
+                        <h4 style="color: var(--text-dark); margin-bottom: 1rem;">Nutrition & Diet</h4>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Expert guidance on healthy eating, meal planning, and nutritional science.</p>
+                        <a href="#" class="btn btn-outline">View Articles</a>
+                    </div>
+                </div>
+                
+                <div class="col-4">
+                    <div style="background: var(--white); padding: 2rem; border-radius: var(--border-radius-lg); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--primary-green); margin-bottom: 1rem;">💪</div>
+                        <h4 style="color: var(--text-dark); margin-bottom: 1rem;">Fitness & Exercise</h4>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Workout routines, exercise tips, and fitness motivation for all levels.</p>
+                        <a href="#" class="btn btn-outline">View Articles</a>
+                    </div>
+                </div>
+                
+                <div class="col-4">
+                    <div style="background: var(--white); padding: 2rem; border-radius: var(--border-radius-lg); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); text-align: center;">
+                        <div style="font-size: 2.5rem; color: var(--primary-green); margin-bottom: 1rem;">🧘</div>
+                        <h4 style="color: var(--text-dark); margin-bottom: 1rem;">Mental Wellness</h4>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Strategies for emotional health, stress management, and mindfulness.</p>
+                        <a href="#" class="btn btn-outline">View Articles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Have a Question for Our Experts?</h2>
+                <p class="section-subtitle">Our wellness professionals are here to help. Contact us for personalized advice and recommendations.</p>
+            </div>
+            
+            <div class="text-center">
+                <a href="contact.html" class="btn btn-primary" style="margin-right: 1rem;">Contact Our Experts</a>
+                <a href="index.html#appointment" class="btn btn-outline">Book a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>VitalCare Wellness</h3>
+                    <p>Your trusted partner in comprehensive healthcare and wellness solutions. We're committed to helping you achieve optimal health and well-being through personalized, evidence-based care.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="career.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services/physiotherapy.html">Physiotherapy</a></li>
+                        <li><a href="services/nutrition.html">Nutrition Counseling</a></li>
+                        <li><a href="services/mental-wellness.html">Mental Wellness</a></li>
+                        <li><a href="services/yoga-fitness.html">Yoga & Fitness</a></li>
+                        <li><a href="services/ayurveda.html">Ayurvedic Treatment</a></li>
+                        <li><a href="services/weight-management.html">Weight Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 123 Wellness Street<br>Health City, HC 12345</p>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ info@vitalcarewellness.com</p>
+                    <p>🕒 Mon-Fri: 8AM-8PM<br>Sat: 9AM-6PM<br>Sun: 10AM-4PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 VitalCare Wellness. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | Made with ❤️ in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="#" class="whatsapp-btn" title="Chat with us on WhatsApp">💬</a>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
