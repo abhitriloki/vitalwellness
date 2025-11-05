@@ -419,16 +419,19 @@ a:hover {
   background: linear-gradient(135deg, rgba(46, 204, 113, 0.85), rgba(39, 174, 96, 0.85)), url('../images/hero-wellness.jpg') center/cover;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   color: var(--white);
 }
 
 .hero-content {
-  padding-top: 80px;
   background: rgba(255, 255, 255, 0.95);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-xxl);
   border-radius: var(--border-radius-lg);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-title {
@@ -471,7 +474,8 @@ a:hover {
 .hero-buttons {
   display: flex;
   gap: var(--spacing-md);
-  margin-bottom: var(--spacing-xl);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .appointment-card {
@@ -1187,5 +1191,37 @@ a:hover {
 
   .hero-subtitle {
     font-size: 0.95rem !important;
+  }
+}
+
+/* Hero section mobile improvements */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+    padding: var(--spacing-lg) 0;
+  }
+
+  .hero-content {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+    margin: var(--spacing-md);
   }
 }
