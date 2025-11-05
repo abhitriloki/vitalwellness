@@ -79,91 +79,95 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===========================================
     // APPOINTMENT FORM HANDLING
     // ===========================================
-    
-    const appointmentForm = document.getElementById('appointmentForm');
-    
-    if (appointmentForm) {
-        appointmentForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const phone = formData.get('phone');
-            const email = formData.get('email');
-            const date = formData.get('date');
-            const time = formData.get('time');
-            const service = formData.get('service');
-            
-            // Validation
-            const errors = [];
-            
-            if (!name || name.trim().length < 2) {
-                errors.push('Please enter a valid name');
-            }
-            
-            if (!phone || !/^[+]?[\d\s\-\(\)]{10,}$/.test(phone)) {
-                errors.push('Please enter a valid phone number');
-            }
-            
-            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                errors.push('Please enter a valid email address');
-            }
-            
-            if (!date) {
-                errors.push('Please select an appointment date');
-            } else {
-                const selectedDate = new Date(date);
-                const today = new Date();
-                today.setHours(0, 0, 0, 0);
-                
-                if (selectedDate < today) {
-                    errors.push('Please select a future date');
+
+    // Function to handle appointment form submission
+    function handleAppointmentForm(formId, messageId) {
+        const appointmentForm = document.getElementById(formId);
+
+        if (appointmentForm) {
+            appointmentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Get form data
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                const phone = formData.get('phone');
+                const email = formData.get('email');
+                const date = formData.get('date');
+                const time = formData.get('time');
+                const service = formData.get('service');
+
+                // Validation
+                const errors = [];
+
+                if (!name || name.trim().length < 2) {
+                    errors.push('Please enter a valid name');
                 }
-            }
-            
-            if (!time) {
-                errors.push('Please select an appointment time');
-            }
-            
-            if (!service) {
-                errors.push('Please select a service');
-            }
-            
-            // Display errors or success
-            const formMessage = document.getElementById('formMessage');
-            
-            if (errors.length > 0) {
-                if (formMessage) {
-                    formMessage.innerHTML = `
-                        <div style="background: #ffebee; color: #c62828; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">
-                            <ul style="margin: 0; padding-left: 1rem;">
-                                ${errors.map(error => `<li>${error}</li>`).join('')}
-                            </ul>
-                        </div>
-                    `;
-                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                if (!phone || !/^[+]?[\d\s\-\(\)]{10,}$/.test(phone)) {
+                    errors.push('Please enter a valid phone number');
                 }
-            } else {
-                // Simulate form submission
-                if (formMessage) {
-                    formMessage.innerHTML = `
-                        <div style="background: #e8f5e8; color: #2e7d32; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">
-                            <h4 style="margin: 0 0 0.5rem 0; color: #2e7d32;">Appointment Request Submitted!</h4>
-                            <p style="margin: 0; color: #2e7d32;">Thank you ${name}! We'll contact you within 24 hours to confirm your appointment for ${service} on ${date} at ${time}.</p>
-                        </div>
-                    `;
-                    formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    errors.push('Please enter a valid email address');
                 }
-                
-                // Reset form
-                this.reset();
-                
-                // In a real application, you would send this data to your server
-                console.log('Appointment data:', { name, phone, email, date, time, service });
-            }
-        });
+
+                if (!date) {
+                    errors.push('Please select an appointment date');
+                } else {
+                    const selectedDate = new Date(date);
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0);
+
+                    if (selectedDate < today) {
+                        errors.push('Please select a future date');
+                    }
+                }
+
+                if (!service) {
+                    errors.push('Please select a service');
+                }
+
+                // Display errors or success
+                const formMessage = document.getElementById(messageId);
+
+                if (errors.length > 0) {
+                    if (formMessage) {
+                        formMessage.innerHTML = `
+                            <div style="background: #ffebee; color: #c62828; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">
+                                <ul style="margin: 0; padding-left: 1rem;">
+                                    ${errors.map(error => `<li>${error}</li>`).join('')}
+                                </ul>
+                            </div>
+                        `;
+                        formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                } else {
+                    // Simulate form submission
+                    if (formMessage) {
+                        const timeText = time ? ` at ${time}` : '';
+                        formMessage.innerHTML = `
+                            <div style="background: #e8f5e8; color: #2e7d32; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">
+                                <h4 style="margin: 0 0 0.5rem 0; color: #2e7d32;">Appointment Request Submitted!</h4>
+                                <p style="margin: 0; color: #2e7d32;">Thank you ${name}! We'll contact you within 24 hours to confirm your appointment for ${service} on ${date}${timeText}.</p>
+                            </div>
+                        `;
+                        formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+
+                    // Reset form
+                    this.reset();
+
+                    // In a real application, you would send this data to your server
+                    console.log('Appointment data:', { name, phone, email, date, time, service });
+                }
+            });
+        }
     }
+
+    // Handle both appointment forms
+    handleAppointmentForm('appointmentForm', 'formMessage');
+    handleAppointmentForm('appointmentForm2', 'formMessage2');
     
     // ===========================================
     // TESTIMONIALS CAROUSEL
